@@ -1,4 +1,9 @@
 resource "local_file" "pet" {
-filename = "pets.tterrxt"
-content = "we Hate pets!"
+filename = var.filename
+content = var.content
 }
+resource "random_pet" "pet" {
+    prefix = "mr"
+    separator = "."
+  
+ }
